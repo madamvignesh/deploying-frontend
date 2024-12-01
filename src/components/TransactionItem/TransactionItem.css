@@ -1,0 +1,30 @@
+.transaction-item{
+    background-color: #f1f5f9;
+    border: 0 px solid;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vh;
+    padding: 24px;
+    margin: 12px;
+}
+.no-underline {
+    text-decoration: none;
+}
+
+.transaction-item-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.transaction-item-details{
+    text-align: start;
+}
+
+.transaction-item-header{
+    color:  #000000;
+    font-size: 26px;
+    font-family: Roboto;
+}
