@@ -9,6 +9,10 @@ const Header = () => {
     setMenuActive(!menuActive);
   };
 
+  const closeMenu = () => {
+    setMenuActive(false);
+  };
+
   return (
     <header className="header-container">
       <div className="header-logo">
@@ -17,8 +21,43 @@ const Header = () => {
       <div className="menu-card" onClick={toggleMenu}>
         {menuActive ? "Close Menu" : "Menu"}
       </div>
-      <nav className={`header-nav ${menuActive ? "active" : ""}`}>
-        <ul className="nav-links">
+      {menuActive && (
+        <div className="popup-menu">
+          <ul className="popup-links">
+            <li>
+              <NavLink
+                to="/"
+                className="popup-link"
+                activeClassName="active-link"
+                onClick={closeMenu}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/api/transactions"
+                className="popup-link"
+                activeClassName="active-link"
+                onClick={closeMenu}
+              >
+                Create
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/api/view-transactions"
+                className="popup-link"
+                activeClassName="active-link"
+                onClick={closeMenu}
+              >
+                View
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      )}
+      <ul className="nav-links">
           <li>
             <NavLink to="/" className="nav-link" activeClassName="active-link">
               Home
@@ -43,7 +82,6 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
-      </nav>
     </header>
   );
 };
