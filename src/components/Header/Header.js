@@ -14,11 +14,8 @@ const Header = () => {
       <div className="header-logo">
         <h1>Transaction Management</h1>
       </div>
-      <div 
-        className={`menu-card ${menuActive ? "active" : ""}`} 
-        onClick={toggleMenu}
-      >
-        Menu
+      <div className="menu-card" onClick={toggleMenu}>
+        {menuActive ? "Close Menu" : "Menu"}
       </div>
       <nav className={`header-nav ${menuActive ? "active" : ""}`}>
         <ul className="nav-links">
@@ -33,7 +30,7 @@ const Header = () => {
               className="nav-link"
               activeClassName="active-link"
             >
-              Create Transaction
+              Create
             </NavLink>
           </li>
           <li>
@@ -42,7 +39,7 @@ const Header = () => {
               className="nav-link"
               activeClassName="active-link"
             >
-              View Transactions
+              View
             </NavLink>
           </li>
         </ul>

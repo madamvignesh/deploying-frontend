@@ -13,7 +13,7 @@
   margin: 0;
 }
 
-/* Navigation */
+/* Navigation - Default for large screens */
 .header-nav {
   display: flex;
 }
@@ -37,14 +37,21 @@
   border-bottom: 2px solid #fff;
 }
 
+.menu-card{
+  display: none;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .header-nav {
-    display: none; /* Hide by default for mobile */
+    display: none; /* Hide navigation links by default */
     flex-direction: column;
     background-color: #007bff;
     padding: 10px;
     border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
   }
 
   .nav-links {
@@ -69,6 +76,6 @@
   }
 
   .menu-card.active + .header-nav {
-    display: flex; /* Show the nav links when menu is active */
+    display: flex; /* Show the nav links when the menu card is active */
   }
 }
