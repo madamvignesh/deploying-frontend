@@ -1,70 +1,98 @@
 .loader-container {
     text-align: center;
   }
-
+  
   .error-container {
     text-align: center;
     color: #d9534f;
   }
+  
   .transaction-item-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically on mobile */
     border: 1px solid #ccc;
-    padding: 20px;
-    margin: 15px 0;
+    padding: 15px; /* Reduced padding for mobile */
+    margin: 10px 0;
     background-color: #f9f9f9;
     border-radius: 8px;
-}
-
-/* Left side - Transaction details */
-.transaction-details {
-    width: 60%;
-    padding-right: 20px;
-}
-
-/* Heading styles for transaction details */
-.transaction-details h1 {
-    font-size: 18px;
+  }
+  
+  /* Left side - Transaction details */
+  .transaction-details {
+    width: 100%; /* Full width for mobile */
+    padding-right: 0;
+    margin-bottom: 10px; /* Add spacing between details and status */
+  }
+  
+  /* Heading styles for transaction details */
+  .transaction-details h1 {
+    font-size: 16px; /* Slightly smaller for mobile */
     color: #333;
-    margin-bottom: 10px;
-}
-
-/* Paragraph styles for transaction details */
-.transaction-details p {
-    font-size: 16px;
-    color: #555;
     margin-bottom: 8px;
-}
-
-.transaction-details strong {
+  }
+  
+  /* Paragraph styles for transaction details */
+  .transaction-details p {
+    font-size: 14px; /* Adjusted for mobile */
+    color: #555;
+    margin-bottom: 6px;
+  }
+  
+  .transaction-details strong {
     font-weight: bold;
     color: #222;
-}
-
-/* Right side - Status update section */
-.status-update-container {
-    width: 35%;
-    padding-left: 20px;
+  }
+  
+  /* Right side - Status update section */
+  .status-update-container {
+    width: 100%; /* Full width for mobile */
+    padding-left: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Status update label */
-.status-label {
-    font-size: 16px;
-    margin-bottom: 10px;
+    justify-content: flex-start; /* Align items at the top */
+  }
+  
+  /* Status update label */
+  .status-label {
+    font-size: 14px; /* Adjusted for mobile */
+    margin-bottom: 8px;
     font-weight: bold;
     color: #333;
-}
-
-/* Dropdown for selecting status */
-.status-dropdown {
-    padding: 8px;
-    font-size: 16px;
+  }
+  
+  /* Dropdown for selecting status */
+  .status-dropdown {
+    padding: 6px; /* Reduced padding for mobile */
+    font-size: 14px; /* Smaller font for dropdown */
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     color: #333;
     cursor: pointer;
-}
+  }
+  
+  /* Mobile-Friendly Styles */
+  @media (max-width: 768px) {
+    .transaction-item-container {
+      padding: 10px;
+      border-radius: 6px;
+    }
+  
+    .transaction-details h1 {
+      font-size: 14px;
+    }
+  
+    .transaction-details p {
+      font-size: 12px;
+    }
+  
+    .status-label {
+      font-size: 12px;
+    }
+  
+    .status-dropdown {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+  

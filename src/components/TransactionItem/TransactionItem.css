@@ -1,30 +1,55 @@
-.transaction-item{
+.transaction-item {
     background-color: #f1f5f9;
-    border: 0 px solid;
+    border: 0px solid;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100vh;
+    width: 100%;
+    max-width: 90vw; /* Ensures it fits smaller screens */
     padding: 24px;
-    margin: 12px;
-}
-.no-underline {
+    margin: 12px auto; /* Centers the items */
+  }
+  
+  .no-underline {
     text-decoration: none;
-}
-
-.transaction-item-heading{
+  }
+  
+  .transaction-item-heading {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.transaction-item-details{
+    align-items: center; /* Aligns items properly */
+  }
+  
+  .transaction-item-details {
     text-align: start;
-}
-
-.transaction-item-header{
-    color:  #000000;
+  }
+  
+  .transaction-item-header {
+    color: #000000;
     font-size: 26px;
-    font-family: Roboto;
-}
+    font-family: Roboto, sans-serif;
+  }
+  
+  /* Mobile-Friendly Styles */
+  @media (max-width: 768px) {
+    .transaction-item {
+      padding: 16px;
+      border-radius: 16px;
+    }
+  
+    .transaction-item-heading {
+      flex-direction: column;
+      align-items: flex-start; /* Stacks items for smaller screens */
+    }
+  
+    .transaction-item-header {
+      font-size: 22px; /* Slightly smaller for mobile readability */
+    }
+  
+    .transaction-item-details {
+      font-size: 14px; /* Adjust detail text size */
+    }
+  }
+  
